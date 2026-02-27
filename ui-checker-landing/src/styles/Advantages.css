@@ -1,0 +1,20 @@
+.adv-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.adv-grid  { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.adv-card  { padding: 22px; }
+.adv-icon-wrap {
+  width: 40px; height: 40px;
+  background: rgba(123,110,246,0.10); border: 1px solid rgba(123,110,246,0.16);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px; transition: background 0.2s ease;
+}
+.adv-card:hover .adv-icon-wrap { background: rgba(123,110,246,0.18); }
+[data-theme="light"] .adv-icon-wrap { background: rgba(96,84,224,0.07); }
+.adv-icon { font-size: 20px; color: var(--primary-light); }
+[data-theme="light"] .adv-icon { color: var(--primary-dark); }
+.adv-title { font-family: var(--font-display);
+ font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+.adv-desc  { font-size: 13px; line-height: 1.72; }
+@media (max-width: 991px) { .adv-inner { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 575px) { .adv-grid { grid-template-columns: 1fr; } }

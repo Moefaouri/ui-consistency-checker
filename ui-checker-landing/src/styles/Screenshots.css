@@ -1,0 +1,85 @@
+.screenshots-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.screen-card { border-radius: var(--card-radius); overflow: hidden; }
+
+.screen-preview {
+  background: #060714;
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 20px; min-height: 200px;
+  display: flex; align-items: center; justify-content: center;
+}
+[data-theme="light"] .screen-preview { background: #0d0f20; }
+
+.sp-inner { width: 100%; max-width: 260px; font-family: var(--font-body); }
+.sp-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.sp-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 5px; padding: 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(123,110,246,0.10);
+  font-size: 10px; font-weight: 500; color: #5e6190;
+}
+.sp-btn-grad { background: linear-gradient(135deg, #7b6ef6, #9b8cf8); border: none; color: white; }
+
+.sp-notice {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(123,110,246,0.07);
+  border: 1px solid rgba(123,110,246,0.15);
+  padding: 7px 9px; border-radius: 8px;
+  font-size: 9px; color: #5e6190; font-family: var(--font-mono);
+}
+
+.sp-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.sp-stat {
+  background: rgba(255,255,255,0.02); border-radius: 8px; padding: 8px;
+  text-align: center; border: 1px solid rgba(123,110,246,0.08);
+}
+.sp-stat-num { font-size: 18px; font-weight: 800; }
+.sp-stat-label { font-size: 9px; color: #444766; text-transform: uppercase; letter-spacing: 0.07em; font-family: var(--font-mono); }
+.sp-stat-pass .sp-stat-num { color: #4ade80; }
+.sp-stat-fail .sp-stat-num { color: #f87171; }
+
+.sp-row {
+  display: flex; align-items: center; gap: 7px; padding: 6px 8px;
+  border-radius: 8px; background: rgba(255,255,255,0.018);
+  border: 1px solid rgba(123,110,246,0.07); margin-bottom: 4px;
+}
+.sp-row-icon { width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sp-row-icon.pass { background: rgba(35,210,110,0.12); color: #4ade80; }
+.sp-row-icon.fail { background: rgba(240,69,69,0.12);  color: #f87171; }
+.sp-row-title { font-size: 10px; font-weight: 600; color: #d8dbff; }
+.sp-row-sub   { font-size: 9px; color: #444766; font-family: var(--font-mono); }
+
+.sp-quality-overall { font-size: 12px; color: #5e6190; text-align: center; margin-bottom: 10px; font-family: var(--font-mono); }
+.sp-metric { margin-bottom: 8px; }
+.sp-metric-header { display: flex; justify-content: space-between; font-size: 10px; font-weight: 600; color: #5e6190; margin-bottom: 4px; }
+.sp-bar { height: 4px; background: rgba(123,110,246,0.10); border-radius: 3px; overflow: hidden; }
+.sp-bar-fill { height: 100%; border-radius: 3px; }
+
+.sp-comp-btn {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 8px; border-radius: 8px;
+  background: linear-gradient(135deg, #00d4c8, #38c8fb);
+  color: white; font-size: 11px; font-weight: 600; margin-bottom: 8px;
+}
+.sp-comp-label { font-size: 9px; font-weight: 400; color: #444766; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 6px; font-family: var(--font-mono); }
+.sp-comp-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 8px; background: rgba(255,255,255,0.018);
+  border-radius: 7px; border: 1px solid rgba(123,110,246,0.07); margin-bottom: 4px;
+}
+.sp-comp-name { font-size: 10px; font-weight: 600; color: #d8dbff; }
+.sp-comp-type { font-size: 9px; color: #444766; font-family: var(--font-mono); }
+.sp-comp-actions { display: flex; gap: 4px; }
+.sp-icon-btn { width: 22px; height: 22px; background: rgba(123,110,246,0.08); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #5e6190; }
+.sp-icon-del { background: rgba(240,69,69,0.10); color: #f87171; }
+
+.screen-info { padding: 16px 20px; }
+.screen-label {
+  font-family: var(--font-display);
+ font-size: 15px; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 4px;
+  letter-spacing: -0.03em;
+}
+.screen-desc { font-size: 13px; }
+
+@media (max-width: 767px) { .screenshots-grid { grid-template-columns: 1fr; } }

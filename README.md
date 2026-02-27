@@ -1,23 +1,62 @@
-# Privacy Policy – UI Consistency Checker
+# UI Consistency Checker — Landing Page
 
-Last updated: February 2026
+A fully structured React + Vite landing page for the UI Consistency Checker Chrome extension.
 
-## Overview
-UI Consistency Checker is a Chrome extension that analyzes web page styles locally in your browser. We are committed to protecting your privacy.
+## Project Structure
 
-## Data Collection
-This extension does NOT collect, store, transmit, or share any personal data. All analysis is performed entirely on your device.
+```
+src/
+├── assets/           # Logo images
+├── components/       # One .jsx file per section
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── Screenshots.jsx
+│   ├── Features.jsx
+│   ├── HowToUse.jsx
+│   ├── Advantages.jsx
+│   ├── VideoDemo.jsx
+│   ├── CTA.jsx
+│   └── Footer.jsx
+├── constants/
+│   └── index.js      # All text content & data
+├── hooks/
+│   ├── useTheme.js       # Dark/light theme toggle
+│   └── useScrollReveal.js # Intersection observer reveal
+├── styles/
+│   ├── global.css        # CSS variables, theme system, utilities
+│   ├── Navbar.css
+│   ├── Hero.css
+│   └── ...               # One CSS file per component
+├── App.jsx
+└── main.jsx
+```
 
-## What the Extension Accesses
-- **Active Tab:** To read the computed CSS styles of elements on the page you choose to inspect.
-- **Storage:** To save your component definitions and settings locally in your browser only.
-- **Scripting:** To inject analysis scripts into the current page on demand.
-- **Clipboard:** To allow you to copy generated CSS fixes.
-- **Notifications:** To alert you when a check or fix is complete.
-- **Context Menus:** To provide a right-click shortcut for running checks.
+## Getting Started
 
-## Third-Party Services
-No data is sent to any external server or third party.
+```bash
+npm install
+npm run dev
+```
 
-## Contact
-For questions: mohammad.elfauri@gmail.com
+## Adding Your Video Demo
+
+In `src/components/VideoDemo.jsx`, replace the placeholder div with:
+
+```jsx
+<iframe
+  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+  title="UI Consistency Checker Demo"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+```
+
+## Dependencies
+
+- React 19
+- Vite 7
+- Bootstrap 5.3 (CDN, responsive grid only)
+- Google Fonts: Fraunces + DM Sans + DM Mono
+- Material Symbols Outlined (CDN)
+
+No extra npm packages required.
